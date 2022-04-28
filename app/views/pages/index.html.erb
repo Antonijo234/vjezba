@@ -140,6 +140,7 @@ ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   <div class="well">
     <h4>Recent post</h4>
       <%@articles.each do |a|%>
+        <strong> Created by:</strong> <%=a.user.email%> <br />
         <strong> <%= link_to a.title, a %> </strong>
         <p> <%=  truncate (a.body) %> </p>
       <% end %>

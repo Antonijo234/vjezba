@@ -1,14 +1,35 @@
 <div id="<%= dom_id article %>">
-  
+<table class="table table-striped">
+  <tr>
+  <th>
+  <p>
+    <strong>Created by:</strong>
+    <%= article.user.email %>
+  </p>
+  </th>
+  <th>
   <p>
     <strong>Title:</strong>
     <%= article.title %>
   </p>
-
+</th>
+<th>
   <p>
     <strong>Body:</strong>
     <%= article.body %>
   </p>
+  </th>
+<th>
+  <p>
+    <%= link_to "Show", article %>
+  
+  </p>
+  </th>
+
+
+
+  </tr>
+</table>
 
 
 </div>
