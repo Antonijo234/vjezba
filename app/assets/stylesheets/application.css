@@ -14,3 +14,7 @@
  *= require_self
  */
 @import "yeti";
+
+body {
+  padding-bottom: 124px;
+}

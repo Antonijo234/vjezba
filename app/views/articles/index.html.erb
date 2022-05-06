@@ -1,4 +1,34 @@
-<%= render 'comments/comment' %>
-
+<div class="row">
+<!-- Blog article Content Column -->
+<div class="col-lg-8">
+<% @articles.each do |article| %>
+<!-- Blog article -->
+<!-- Title -->
+<h4 style="font-size: 45.5px;"><%= link_to article.title, article %></h4>
+<!-- Date/Time -->
+<p><span class="glyphicon glyphicon-time"></span>
+</p>
+<!-- Author -->
+<p>
+Article created By:<strong> <%= article.user.email %></strong>
+</p>
+<hr>
+<!-- articleed Comments -->
+<!-- Comment -->
+<% end %>
+<%= link_to "New article", new_article_path, class: "btn btn-default btn-xs" %>
+</div>
+<!-- Blog Sidebar Widgets Column -->
+<div class="col-md-4">
+<div class="well">
+<h4></h4>
+<% @lastthree.each do |p| %>
+Created by: <%= p.user.username %><br />
+<strong><%= link_to p.title, p %></strong>
+<p><%= truncate(p.body) %></p>
+<% end %>
+</div>
+</div>
+<%= will_paginate @articles%>
+</div>
 <br>
-<%= link_to "New article", new_article_path %>

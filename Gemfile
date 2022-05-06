@@ -8,7 +8,8 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
