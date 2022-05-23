@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    describe 'creation' do
-    it 'can be created' do
-      user = User.create(email: "testuser@gmail.com", password: "asdf123", password_confirmation: "asdf123")
-      expect(user).to be_valid
-    end
-  end
-end
+     it "must have a email" do
+       user=FactoryBot.create(:user)
+       expect(user.email).to eq("mystring@gmail.com")
+     end
+     it "must have an password confirmation same as password" do
+       user=FactoryBot.create(:user)
+       expect(user.password).to eq(user.password_confirmation)
+     end
+
+   end
